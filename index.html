@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание НГПУ — Группа 3.024.2.23</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="badge">ИОДО • Педагогическое образование</div>
+      <h1>Группа 3.024.2.23</h1>
+      <p class="status">Автообновление: <span id="update-status">Синхронизировано</span></p>
+    </header>
+
+    <section class="actions-panel">
+      <a id="btn-apple" class="btn btn-primary" href="schedule-nspu.ics"> Добавить в iCalendar</a>
+      <a id="btn-google" class="btn btn-secondary" href="https://calendar.google.com/calendar/render" target="_blank" rel="noopener">Google Календарь</a>
+      <button id="btn-copy" class="btn btn-outline" type="button">Копировать ссылку</button>
+      <a id="btn-download" class="btn btn-outline" href="schedule-nspu.ics" download>Скачать .ics</a>
+    </section>
+
+    <section class="filter-panel">
+      <div class="filter-group">
+        <label for="week-select">Неделя:</label>
+        <select id="week-select" class="select-input">
+          <option value="1">Неделя 1</option>
+          <option value="2">Неделя 2</option>
+          <option value="3">Неделя 3</option>
+          <option value="4">Неделя 4</option>
+          <option value="5">Неделя 5</option>
+          <option value="6">Неделя 6</option>
+          <option value="7">Неделя 7</option>
+          <option value="8">Неделя 8</option>
+          <option value="9">Неделя 9</option>
+          <option value="10">Неделя 10</option>
+          <option value="11">Неделя 11</option>
+          <option value="12">Неделя 12</option>
+          <option value="13">Неделя 13</option>
+          <option value="session">Экзаменационная сессия</option>
+        </select>
+      </div>
+      <div class="days-bar" id="days-filter">
+        <button class="day-btn active" data-day="all">Все</button>
+        <button class="day-btn" data-day="Пн">Пн</button>
+        <button class="day-btn" data-day="Вт">Вт</button>
+        <button class="day-btn" data-day="Ср">Ср</button>
+        <button class="day-btn" data-day="Чт">Чт</button>
+        <button class="day-btn" data-day="Пт">Пт</button>
+        <button class="day-btn" data-day="Сб">Сб</button>
+      </div>
+    </section>
+
+    <main id="schedule-container" class="cards-grid">
+      <div class="loading">Загрузка расписания...</div>
+    </main>
+
+    <div id="toast" class="toast">Ссылка скопирована!</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
